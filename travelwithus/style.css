@@ -11,7 +11,8 @@ body{
 }
 
 
-nav{
+/* nav{
+
     display: flex;
     justify-content: flex-end;
     height:10vh;
@@ -88,4 +89,71 @@ footer strong{
 footer p{
     color:whitesmoke;
     font-size: 2.5vh; 
+} */
+header{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content:space-around;
 }
+.logo
+{
+    text-decoration:none;
+    color:black;
+    font-family: 'Pacifico', cursive; 
+    font-size: 5vh; 
+}
+nav{
+  margin-top: 3vh;
+  width:100%;
+  text-align: center;
+
+ 
+}
+.nav-item{
+    text-decoration: none;
+    padding:0 5vh;
+    font-size: 3.5vh;
+    color:rgba(119, 30, 30, 0.829);
+}
+.nav-item:hover{
+    background-color: rgba(255, 255, 255,0.5);
+    color:black;
+}
+.container
+{
+    margin:20vh 0 0 40vh;
+    flex:1;
+}
+
+.button
+{
+    color:white;
+    padding: 2vh 3vh;
+    font-family: inherit;
+    border:0;
+    background-color: rgba(0, 0, 255,0.5);
+    font-size: 3vh;
+    
+}
+.button:hover{
+    color:black;
+   
+}
+footer{
+position:absolute;
+bottom:0;
+display:inline-flex;
+width:100%;
+background-color: rgba(255, 255, 255,0.2)
+
+}
+
+footer ul{
+    list-style-type: none;
+}
+
+footer div{
+    margin:0 22vh;
+}
+
