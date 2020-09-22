@@ -1,0 +1,139 @@
+html,body {
+    width: 100%;
+    height: 100%;
+    margin:0;
+    padding:0;  
+}
+article {
+    min-height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;    
+    background-image: url("Shopping.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+main {
+    flex-grow: 1;
+}
+header, main, footer {
+    flex-shrink: 0;
+}
+nav{  
+    background-color:black; 
+    color:white;
+}
+.logo
+{
+    position:fixed;
+    left:0;    
+    text-decoration: none;
+    padding: 2vh 4vh;
+    color: white;
+}
+.logo:hover{
+ background-color: black;
+ color:white;
+}
+nav ul{
+    /* float:left; */
+    display:flex;
+    justify-content:center; 
+    margin:0;
+    padding:0;
+    /* padding:0;  */
+}
+nav ul li{
+    /* float:left; */
+    list-style: none;
+    position: relative; 
+    /* margin-right: 15vh; */  
+}
+nav ul li a{
+    text-decoration: none;
+    display: block;
+    color:white;
+    padding:2vh 4vh;
+} 
+  /* .nav-item{
+    text-decoration: none;
+    display: block;
+    color:white;
+    padding:2vh 4vh;
+}   */
+
+nav a:hover{
+    background-color:#e8d7db;
+    color:black;
+} 
+ /* .nav-item:hover{
+    background-color: grey;
+} */
+
+/* .nav-sub-items{
+    display:none;
+    position: absolute;
+    background: red;
+    padding:0vh;
+} */
+nav ul li ul{
+    display:none;
+    position: absolute;
+    background-color:#e8d7db;
+    padding:0vh;    
+}
+nav ul li:hover ul{
+    display:block;
+} 
+nav ul li ul li{
+    width:20vh;      
+}
+ nav ul li ul li a{  
+  text-align: center;
+  color:black;
+  padding:2vh 4vh;
+  text-decoration: none;
+}
+ /* .nav-sub-item{  
+    text-decoration: none;
+    text-align: center;
+    color:black;
+    padding:2vh 4vh;
+  }  */
+ nav ul li ul li a:hover{
+   background-color: #fff;
+} 
+ /* .nav-item .nav-sub-item:hover{
+    background-color: #fff;
+ }   */
+
+
+
+main div{
+margin-left:33vh;
+margin-top: 20vh;
+font-weight: bolder;
+ }
+main a{
+   display: inline-block;
+   margin-top:1vh;
+   text-decoration: none;
+   padding: 2vh 4vh;
+   color: black;
+   background-color:powderblue;
+}
+main a:hover{
+    color: white;
+    background-color: navy;
+}
+footer{
+  display:flex;
+  justify-content:space-around;
+  background-color: black;
+  color: white;
+}
+ footer div ul{
+     list-style: none;
+ }
+
