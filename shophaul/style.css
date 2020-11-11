@@ -246,7 +246,6 @@ body{
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center center;
-    /* background-attachment: fixed; */
   }
  .btn{
      border:0;
@@ -270,7 +269,6 @@ body{
 
  /* New Arrival */
  .new_arrivals{
-     /* background-color: whitesmoke; */
      color:var(--clr-dark);
      text-align:left;
      margin-bottom:0.5em;
@@ -311,9 +309,9 @@ color:black;
 background-color: var(--clr-light);
 text-align: center;
 }
+
 /* BestSeller */
 .best_seller{
-    /* background-color:var(--clr-dark); */
     color:var(--clr-light);
     text-align:left;
     margin-bottom:0.5em;
@@ -342,7 +340,6 @@ text-align: center;
 /* Featured */
 
 .featured{
-    /* background-color:whitesmoke; */
     color:var(--clr-dark);
     text-align:left;
     margin-bottom:0.5em;
