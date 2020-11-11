@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="product_section.css">
+    <link rel="stylesheet" href="product_description_page.css">
+    <title>ShopHaul_Product_Section</title>
+<body>
+    <header>
+            <nav class="nav">
+                    <ul class="nav_list" id="sideNav">
+                        <li class="nav_list_item" style="float:left"><div class="logo">ShopHaul</div></li>
+                        <li class="nav_list_item"><a href="index.html" class="nav_link">Shop</a></li>
+                        <li class="nav_list_item"><a href="product_section.html" class="nav_link">Men</a></li>
+                        <li class="nav_list_item"><a href="product_section.html" class="nav_link">Women</a></li>
+                        <li class="nav_list_item"><a href="product_section.html" class="nav_link">Kids</a></li>
+                        <li class="nav_list_item"><a href="#" class="nav_link">Offers</a>
+                            <div class="nav_sublist">
+                                    <div class="nav_sublist_item"><a href="index.html#new_arrival" class="nav_sublist_link">New Arrivals</a></div>
+                                    <div class="nav_sublist_item"><a href="index.html#best_sellers" class="nav_sublist_link">Best Sellers</a></div>
+                                    <div class="nav_sublist_item"><a href="index.html#features" class="nav_sublist_link">Featured</a></div>
+                                </div>
+                        </li>
+                        <li class="nav_list_item cart"><a href="account_page.html" class="nav_link"><i class="fa fa-user"></i></a></li> 
+                    </ul>
+                    <button class="nav_toggle">
+                            <span class="hamburger"></span>
+                    </button>
+                </nav>
+    </header>
+    <script src="nav.js">
+    </script>
+<!-- Product description section -->
+<div class="product_description_section">
+
+    <div class="product_image_section">
+        <div class="slide_container">
+               
+                <figure class="slide product_image">
+                        <img src="img/1.jpg" alt="">
+                </figure>
+                <figure class="slide product_image">
+                            <img src="img/2.jpg" alt="">
+                </figure>
+                <figure class="slide product_image">
+                                <img src="img/3.jpg" alt="">
+                </figure>
+                <figure class="slide product_image">
+                            <img src="img/4.jpg" alt="">
+                </figure>
+                <figure class="slide product_image">
+                        <img src="img/5.jpg" alt="">
+                </figure>
+                <figure class="slide product_image">
+                    <img src="img/6.jpg" alt="">
+                </figure>
+        </div>  
+       
+  
+        <div class="row">
+                <div class="column">
+                  <img class="demo cursor" src="img/1.jpg" style="width:100%" onmouseover="currentSlide(1)">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="img/2.jpg" style="width:100%" onmouseover="currentSlide(2)">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="img/3.jpg" style="width:100%" onmouseover="currentSlide(3)">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="img/4.jpg" style="width:100%" onmouseover="currentSlide(4)">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="img/5.jpg" style="width:100%" onmouseover="currentSlide(5)">
+                </div>    
+                <div class="column">
+                  <img class="demo cursor" src="img/6.jpg" style="width:100%" onmouseover="currentSlide(6)">
+                </div>
+        </div>
+    
+    </div>
+
+    <script>
+            var slideIndex=1;
+        displaySlide(slideIndex);
+        function previousSlide()
+        {
+            displaySlide(slideIndex-=1);
+        }
+        function nextSlide()
+        {
+            displaySlide(slideIndex+=1);
+        }
+        function currentSlide(n) {
+             displaySlide(slideIndex = n);
+}
+        function displaySlide(n)
+        {
+            var slide=document.getElementsByClassName("slide");
+            if(n>slide.length){slideIndex=1;};
+            if(n<1){slideIndex=slide.length;};
+            for(var i=0;i<slide.length;i++)
+            {
+                slide[i].style.display="none";
+            }
+            slide[slideIndex-1].style.display="block";
+        
+        }
+        </script>
+
+
+    <div class="product_details_section">
+        <div class="product_name">
+            <h3>Product Name</h3>
+        </div>
+        <div class="product_price">$50.00</div>
+        <div class="product_info_title">
+            <h3>Product Details</h3>
+        </div>
+        <div class="product_info">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, consequuntur possimus! Odit, 
+              officia! Aut assumenda corrupti dolorem voluptas, placeat, magni laboriosam facere maxime officiis 
+              perferendis, veniam labore vero voluptates cum.</p>  
+        </div>
+        <div class="product_size_selector">
+                <select name="size-selector" id="size" class="inputs">
+                        <option value="small">Select Size</option>
+                        <option value="small">Small</option>
+                        <option value="large">Large</option>
+                        <option value="medium">Medium</option>
+                </select>
+        </div>
+        <div class="product_color_selector">
+                <select name="color-selector" id="color" class="inputs">
+                        <option value="small">Select Colour</option>
+                        <option value="small">Red</option>
+                        <option value="large">Black</option>
+                        <option value="medium">White</option>
+                      </select>
+        </div>
+        <div class="product_quantity_selector">
+                <h3>Quantity</h3>
+                <input type="number"  max="9999" min="1" value="1"  step="1" class="inputs"  id="quantity">
+        </div>
+        <div>
+                <input type="submit"  value="Add to Cart"
+                 class="inputs" id="button">
+                <a href="shopping_cart.html"><input type="submit"  value="View Cart"
+                    class="inputs" id="button"></a>
+        </div>
+    </div>
+</div>
+<!-- Recommendation Section -->
+<div class="best_seller" id="best_sellers">
+        <h1 class="recommendation_title">
+            Recommended for you
+        </h1>
+        <div class="best_seller_items">
+                <!-- Recommendation_item_1 -->
+                    <figure class="best_seller_item">
+                        <a href="product_description_page.html" class="best_seller_link">
+                            <img src="img/port1.jpg" alt="" class="best_seller_img">
+                        </a>
+                        <figcaption>Name</figcaption>
+                        <figcaption>$Price</figcaption>
+                    </figure>
+                 <!-- Recommendation_item_2 -->
+                 <figure class="best_seller_item">
+                        <a href="product_description_page.html" class="new_arrival_link">
+                            <img src="img/port2.jpg" alt="" class="best_seller_img">
+                        </a>
+                        <figcaption>Name</figcaption>
+                        <figcaption>$Price</figcaption>
+                    </figure>
+                 <!--Recommendation_item_3 -->
+                 <figure class="best_seller_item">
+                        <a href="product_description_page.html" class="best_seller_link">
+                            <img src="img/port3.jpg" alt="" class="best_seller_img">
+                        </a>
+                        <figcaption>Name</figcaption>
+                        <figcaption>$Price</figcaption>
+                    </figure>
+    </div>
+<!-- Footer -->
+<footer class="footer_section">
+    <div class="footer">
+        <ul class="footer_list">
+            <li class="footer_list_item"></li><a href="" class="footer_link">Men</a></li>
+            <li class="footer_list_item"></li><a href="" class="footer_link">Women</a></li>
+            <li class="footer_list_item"></li><a href="" class="footer_link">Kids</a></li>
+        </ul>
+    </div>
+    <div class="footer">
+        <ul class="footer_list">
+            <li class="footer_list_item"></li><a href="#new_arrival" class="footer_link">New Arrival</a></li>
+            <li class="footer_list_item"></li><a href="#best_sellers" class="footer_link">Best Seller</a></li>
+            <li class="footer_list_item"></li><a href="#features" class="footer_link">Featured</a></li>
+        </ul>
+    </div>
+    <div class="footer">
+        <ul class="footer_list">
+            <li class="footer_list_item"></li><a href="https://facebook.com" class="footer_link"><i class="fa fa-facebook"></i></a></li>
+            <li class="footer_list_item"></li><a href="https://twitter.com" class="footer_link"><i class="fa fa-twitter"></i></a></li>
+            <li class="footer_list_item"></li><a href="https://instagram.com" class="footer_link"><i class="fa fa-instagram"></i></a></li>
+        </ul>
+    </div>
+</footer>
+</body>
+</html>

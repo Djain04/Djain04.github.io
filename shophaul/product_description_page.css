@@ -1,0 +1,92 @@
+ .product_description_section{
+    display:flex;
+    justify-content:center;
+}
+.product_image_section{
+    padding:1em;
+    margin:1em;
+    justify-content: center;
+    width:40em;
+    height:30em;
+}
+.product_image{
+    padding:0;
+    margin:0;
+}
+.product_info{
+    width:30em;
+    height:5em;
+}
+.inputs{
+    width:9em;
+    height: 2em;
+    margin-top:1em;
+    border: 2px solid gray;
+    background-color: none;
+    font-family:inherit;
+}
+.inputs:hover{
+    outline:2px solid dodgerblue;
+    border:none;
+}
+.inputs:focus{
+    outline:2px solid dodgerblue;
+    border:none;
+}
+#quantity{
+    width:3em;
+    height:2em;
+    margin-top:0;
+    margin-bottom:0.8em;
+}
+#button{
+    width:10em;
+    height:2em;
+    margin-top:0;
+    border:2px solid dodgerblue;
+    outline: none;
+    color:dodgerblue; 
+    margin-right:2em;
+}
+#button:hover{
+    background-color:dodgerblue;
+     color:white;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+.column {
+    float: left;
+    width: 16.66%;
+  }
+.column:hover{
+    opacity:0.8;
+    outline: 3px solid dodgerblue;
+    outline-offset:0.2em;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color:black;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  background-color: none!important;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right:52%;
+  border-radius: 3px 0 0 3px;
+} 
+

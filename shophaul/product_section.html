@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="product_section.css">
+    <title>ShopHaul_Product_Section</title>
+<body>
+    <header>
+            <nav class="nav">
+                    <ul class="nav_list" id="sideNav">
+                        <li class="nav_list_item" style="float:left"><div class="logo">ShopHaul</div></li>
+                        <li class="nav_list_item"><a href="index.html" class="nav_link">Shop</a></li>
+                        <li class="nav_list_item"><a href="product_section.html" class="nav_link">Men</a></li>
+                        <li class="nav_list_item"><a href="product_section.html" class="nav_link">Women</a></li>
+                        <li class="nav_list_item"><a href="product_section.html" class="nav_link">Kids</a></li>
+                        <li class="nav_list_item"><a href="#" class="nav_link">Offers</a>
+                            <div class="nav_sublist">
+                                    <div class="nav_sublist_item"><a href="index.html#new_arrival" class="nav_sublist_link">New Arrivals</a></div>
+                                    <div class="nav_sublist_item"><a href="index.html#best_sellers" class="nav_sublist_link">Best Sellers</a></div>
+                                    <div class="nav_sublist_item"><a href="index.html#features" class="nav_sublist_link">Featured</a></div>
+                                </div>
+                        </li>
+                        <li class="nav_list_item cart"><a href="account_page.html" class="nav_link"><i class="fa fa-user"></i></a></li> 
+                    </ul>
+                    <button class="nav_toggle">
+                            <span class="hamburger"></span>
+                    </button>
+                </nav>
+    </header>
+    <script src="nav.js">
+    </script>
+ <!-- Product_Section-->
+ <div class="product_section_header">
+    <div class="slide_button"><a class="prev" onclick="previousSlide()">&#10094;</a></div>    
+    <!-- Slide 1 -->
+    <div class="slide">
+           <div>
+                   <figure class="options"> 
+                           <img src="img/1.jpg" alt="">
+                           <figcaption>Ethnic Wear</figcaption>
+                    </figure>  
+           </div>
+       <div>
+               <figure class="options"> 
+                       <img src="img/2.jpg" alt="">
+                       <figcaption>Sports Wear</figcaption>
+                   </figure>  
+       </div>
+       <div>
+               <figure class="options"> 
+                       <img src="img/3.jpg" alt="">
+                       <figcaption>Formal Wear</figcaption>
+                   </figure>  
+       </div>
+       <div>
+               <figure class="options"> 
+                       <img src="img/4.jpg" alt="">
+                       <figcaption>Casual Wear</figcaption>
+                   </figure>  
+       </div>
+       <div>
+               <figure class="options"> 
+                       <img src="img/5.jpg" alt="">
+                       <figcaption>Night Wear</figcaption>
+                   </figure>  
+       </div>
+       <div>
+               <figure class="options"> 
+                       <img src="img/6.jpg" alt="">
+                       <figcaption>Winter Wear</figcaption>
+                   </figure>  
+       </div>
+   </div>
+
+<!-- Slide2 -->
+   <div class="slide">
+          <div>
+                  <figure class="options"> 
+                          <img src="img/6.jpg" alt="">
+                          <figcaption>Ethnic Wear</figcaption>
+                   </figure>  
+          </div>
+      <div>
+              <figure class="options"> 
+                      <img src="img/5.jpg" alt="">
+                      <figcaption>Sports Wear</figcaption>
+                  </figure>  
+      </div>
+      <div>
+              <figure class="options"> 
+                      <img src="img/4.jpg" alt="">
+                      <figcaption>Formal Wear</figcaption>
+                  </figure>  
+      </div>
+      <div>
+              <figure class="options"> 
+                      <img src="img/3.jpg" alt="">
+                      <figcaption>Casual Wear</figcaption>
+                  </figure>  
+      </div>
+      <div>
+              <figure class="options"> 
+                      <img src="img/2.jpg" alt="">
+                      <figcaption>Night Wear</figcaption>
+                  </figure>  
+      </div>
+      <div>
+              <figure class="options"> 
+                      <img src="img/1.jpg" alt="">
+                      <figcaption>Winter Wear</figcaption>
+                  </figure>  
+      </div>
+  </div>
+   <div class="slide_button"><a class="next" onclick="nextSlide()">&#10095;</a></div>
+ </div>
+
+<script>
+    var slideIndex=1;
+displaySlide(slideIndex);
+function previousSlide()
+{
+    displaySlide(slideIndex-=1);
+}
+function nextSlide()
+{
+    displaySlide(slideIndex+=1);
+}
+function displaySlide(n)
+{
+    var slide=document.getElementsByClassName("slide");
+    if(n>slide.length){slideIndex=1;};
+    if(n<1){slideIndex=slide.length;};
+    for(var i=0;i<slide.length;i++)
+    {
+        slide[i].style.display="none";
+    }
+    slide[slideIndex-1].style.display="block";
+
+}
+</script>
+<!-- Recommendation Section -->
+<div class="best_seller" id="best_sellers">
+        <h1 class="recommendation_title">
+            Recommended for you
+        </h1>
+        <div class="best_seller_items">
+                <!-- Recommendation_item_1 -->
+                    <figure class="best_seller_item">
+                        <a href="product_description_page.html" class="best_seller_link">
+                            <img src="img/port1.jpg" alt="" class="best_seller_img">
+                        </a>
+                        <figcaption>Name</figcaption>
+                        <figcaption>$Price</figcaption>
+                    </figure>
+                 <!-- Recommendation_item_2 -->
+                 <figure class="best_seller_item">
+                        <a href="product_description_page.html" class="new_arrival_link">
+                            <img src="img/port2.jpg" alt="" class="best_seller_img">
+                        </a>
+                        <figcaption>Name</figcaption>
+                        <figcaption>$Price</figcaption>
+                    </figure>
+                 <!--Recommendation_item_3 -->
+                 <figure class="best_seller_item">
+                        <a href="product_description_page.html" class="best_seller_link">
+                            <img src="img/port3.jpg" alt="" class="best_seller_img">
+                        </a>
+                        <figcaption>Name</figcaption>
+                        <figcaption>$Price</figcaption>
+                    </figure>
+                 <!--Recommendation_item_4 -->
+                 <figure class="best_seller_item">
+                        <a href="product_description_page.html" class="best_seller_link">
+                            <img src="img/port4.jpg" alt="" class="best_seller_img">
+                        </a>
+                        <figcaption>Name</figcaption>
+                        <figcaption>$Price</figcaption>
+                    </figure>
+                 <!--Recommendation_item_5 -->
+                 <figure class="best_seller_item">
+                        <a href="product_description_page.html" class="best_seller_link">
+                            <img src="img/port5.jpg" alt="" class="best_seller_img">
+                        </a>
+                        <figcaption>Name</figcaption>
+                        <figcaption>$Price</figcaption>
+                    </figure>
+                 <!--Recommendation_item_6 -->
+                 <figure class="best_seller_item">
+                        <a href="product_description_page.html" class="best_seller_link">
+                            <img src="img/port6.jpg" alt="" class="best_seller_img">
+                        </a>
+                        <figcaption>Name</figcaption>
+                        <figcaption>$Price</figcaption>
+                    </figure>
+            </div>
+    </div>
+<!-- Footer -->
+<footer class="footer_section">
+    <div class="footer">
+        <ul class="footer_list">
+            <li class="footer_list_item"></li><a href="" class="footer_link">Men</a></li>
+            <li class="footer_list_item"></li><a href="" class="footer_link">Women</a></li>
+            <li class="footer_list_item"></li><a href="" class="footer_link">Kids</a></li>
+        </ul>
+    </div>
+    <div class="footer">
+        <ul class="footer_list">
+            <li class="footer_list_item"></li><a href="#new_arrival" class="footer_link">New Arrival</a></li>
+            <li class="footer_list_item"></li><a href="#best_sellers" class="footer_link">Best Seller</a></li>
+            <li class="footer_list_item"></li><a href="#features" class="footer_link">Featured</a></li>
+        </ul>
+    </div>
+    <div class="footer">
+        <ul class="footer_list">
+            <li class="footer_list_item"></li><a href="https://facebook.com" class="footer_link"><i class="fa fa-facebook"></i></a></li>
+            <li class="footer_list_item"></li><a href="https://twitter.com" class="footer_link"><i class="fa fa-twitter"></i></a></li>
+            <li class="footer_list_item"></li><a href="https://instagram.com" class="footer_link"><i class="fa fa-instagram"></i></a></li>
+        </ul>
+    </div>
+</footer>
+</body>
+</html>
