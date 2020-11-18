@@ -4,96 +4,193 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Pacifico&family=Slabo+27px&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>HomePage</title>
 </head>
 <body>
-<div class="main-page">
-        <header>
-                <a class="logo" href="#">TravelWithUs</a>
-            <nav>
-                <a class="nav-item" href="#">Home</a>
-                <a class="nav-item" href="#">About</a>
-                <a class="nav-item" href="#">Services</a>
-                <a class="nav-item" href="#">Contact</a>
-            </nav>
-        
-         </header>
-    <div class="container">
-            <div class="book-appointment">
-                    <h1>Choose your destination</h1>
-                    <h2>We will plan it for you</h2>
-                    <input type="text"placeholder="destination">
-                    <input type="text"placeholder="start date">
-                    <input type="text"placeholder="end date">
-                    <input type="text"placeholder="guests">
-                    <input type="submit" value="Lets Plan!" class="button">
-            </div>
+<div class="home_section">
+    <header>
+       <a href="#" class="logo">TravelWithUs</a>
+       <div class="toggle" onclick="toggleMenu()"></div>
+    </header>
+   <div class="content">
+   <div class="search_bar">
+        <input type="text" class="search_textbox" placeholder="Your next destination">
+    <button class="search_button"><i class="fa fa-search"></i></button>
+   </div>
+   </div>
+    <div class="navigation"> 
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Booking</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Blog</a></li>
+      </ul>
     </div>
 </div>
+<script>
+    function toggleMenu() {
+        const MenuToggle=document.querySelector('.toggle');
+        const Navigation=document.querySelector('.navigation');
+        MenuToggle.classList.toggle('active');
+        Navigation.classList.toggle('active');
+
+    }
+</script>
 <h2 style="margin-left:4vh;">Top Destinations</h2>
 <div class="destination-outer">
   
+                        
                         <div class="destinations">
-                            <figure>
-                                    <figcaption>San Francisco</figcaption>
-                                <img src="San_Francisco.jpg" style="width:100%" alt="">
-                            </figure>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Soluta hic ullam natus assumenda earum atque, quibusdam deserunt debitis rem accusantium, veniam consequuntur excepturi
-                                praesentium tempora! Magni maiores maxime blanditiis recusandae.</p>
-                        </div>
-                        <div class="destinations">
-
+                             
                                 <figure>
-                                        <figcaption>Amsterdam</figcaption>
-                                    <img src="Amsterdam.jpg" style="width:100%" alt="">
+                                    <img src="Dubai.jpg" width=100% height=250px style="object-fit: cover;" alt="">  
+                                    <div id="destination_rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-half-o"></i>
+                                    </div> 
+                                    <div id="destination_price">$0.0</div>
                                 </figure>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                    Soluta hic ullam natus assumenda earum atque, quibusdam deserunt debitis rem accusantium, veniam consequuntur excepturi
-                                    praesentium tempora! Magni maiores maxime blanditiis recusandae.</p>
-                        </div>
-                        <div class="destinations">
-                                    <figure>
-                                            <figcaption>Paris</figcaption>
-                                        <img src="Paris.jpg" style="width:100%" alt="">
-                                    </figure>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                        Soluta hic ullam natus assumenda earum atque, quibusdam deserunt debitis rem accusantium, veniam consequuntur excepturi
-                                        praesentium tempora! Magni maiores maxime blanditiis recusandae.</p>
-                        </div>
-                        <div class="destinations">
-                                <figure>
-                                        <figcaption>Dubai</figcaption>
-                                    <img src="Dubai.jpg" style="width:100%" alt="">
-                                </figure>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                    Soluta hic ullam natus assumenda earum atque, quibusdam deserunt debitis rem accusantium, veniam consequuntur excepturi
-                                    praesentium tempora! Magni maiores maxime blanditiis recusandae.</p>
+                                <div class="destination_details">
+                                        <div id="destination_title">Dubai</div>
+                                        <p id="destination_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                            Soluta hic ullam natus assumenda earum atque, quibusdam deserunt debitis rem accusantium
+                                            .</p>
+                                        <div id="destination_package">
+                                         <span><i class="fa fa-map-marker"></i>Dubai</span>   
+                                          <span><i class="fa fa-sun-o"></i>4 Days</span>  
+                                          <span> <i class="fa fa-moon-o"></i>3 Nights</span> 
+                                    </div>
+                                </div>
                     </div>
                     <div class="destinations">
                             <figure>
-                                    <figcaption>Singapore</figcaption>
-                                <img src="Singapore.jpg" style="width:100%" alt="">
+                                <img src="Singapore.jpg" width=100% height=250px style="object-fit: cover;" alt="">
+                                <div id="destination_rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-half-o"></i>
+                                </div> 
+                                <div id="destination_price">$0.0</div>
                             </figure>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Soluta hic ullam natus assumenda earum atque, quibusdam deserunt debitis rem accusantium, veniam consequuntur excepturi
-                                praesentium tempora! Magni maiores maxime blanditiis recusandae.</p>
+                            <div class="destination_details">
+                                    <div id="destination_title">Singapore</div>
+                                    <p id="destination_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                        Soluta hic ullam natus assumenda earum atque, quibusdam deserunt debitis rem accusantium
+                                        .</p>
+                                    <div id="destination_package">
+                                     <span><i class="fa fa-map-marker"></i>Singapore</span>   
+                                      <span><i class="fa fa-sun-o"></i>4 Days</span>  
+                                      <span> <i class="fa fa-moon-o"></i>3 Nights</span> 
+                                </div>
+                            </div>
+            </div>   
+            <div class="destinations">
+                    <figure>
+                        <img src="San_Francisco.jpg"  width=100% height=250px style="object-fit: cover;">
+                        <div id="destination_rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                        </div> 
+                        <div id="destination_price">$0.0</div>
+                    </figure>
+                    <div class="destination_details">
+                            <div id="destination_title">San Francisco</div>
+                            <p id="destination_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Soluta hic ullam natus assumenda earum atque, quibusdam deserunt debitis rem accusantium
+                                .</p>
+                            <div id="destination_package">
+                             <span><i class="fa fa-map-marker"></i>San Francisco</span>   
+                              <span><i class="fa fa-sun-o"></i>4 Days</span>  
+                              <span> <i class="fa fa-moon-o"></i>3 Nights</span> 
+                        </div>
+                    </div>    
                 </div>
                 <div class="destinations">
+                            <figure>
+                                 
+                                <img src="Amsterdam.jpg" width=100% height=250px style="object-fit: cover;" alt="">
+                                <div id="destination_rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-half-o"></i>
+                                </div> 
+                                <div id="destination_price">$0.0</div>
+                            </figure>
+                            <div class="destination_details">
+                                    <div id="destination_title">Amsterdam</div>
+                                    <p id="destination_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                        Soluta hic ullam natus assumenda earum atque, quibusdam deserunt debitis rem accusantium
+                                        .</p>
+                                    <div id="destination_package">
+                                     <span><i class="fa fa-map-marker"></i>Amsterdam</span>   
+                                      <span><i class="fa fa-sun-o"></i>4 Days</span>  
+                                      <span> <i class="fa fa-moon-o"></i>3 Nights</span> 
+                                </div>
+                            </div>    
+                </div> 
+                <div class="destinations">
                         <figure>
-                            <figcaption>London</figcaption>
-                            <img src="London.jpg" style="width:100%" alt="">
+                            <img src="Paris.jpg" width=100% height=250px style="object-fit: cover;" alt="">
+                            <div id="destination_rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-half-o"></i>
+                            </div> 
+                            <div id="destination_price">$0.0</div>
                         </figure>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Soluta hic ullam natus assumenda earum atque, quibusdam deserunt debitis rem accusantium, veniam consequuntur excepturi
-                            praesentium tempora! Magni maiores maxime blanditiis recusandae.</p>
+                        <div class="destination_details">
+                                <div id="destination_title">Paris</div>
+                                <p id="destination_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Soluta hic ullam natus assumenda earum atque, quibusdam deserunt debitis rem accusantium
+                                    .</p>
+                                <div id="destination_package">
+                                 <span><i class="fa fa-map-marker"></i>Paris</span>   
+                                  <span><i class="fa fa-sun-o"></i>4 Days</span>  
+                                  <span> <i class="fa fa-moon-o"></i>3 Nights</span> 
+                            </div>
+                        </div>    
             </div>
-           
-                                
-                   
+            <div class="destinations">
+                    <figure>
+                        <img src="London.jpg" width=100% height=250px style="object-fit: cover;" alt="">
+                        <div id="destination_rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                        </div> 
+                        <div id="destination_price">$0.0</div>
+                    </figure>
+                    <div class="destination_details">
+                            <div id="destination_title">London</div>
+                            <p id="destination_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Soluta hic ullam natus assumenda earum atque, quibusdam deserunt debitis rem accusantium
+                                .</p>
+                            <div id="destination_package">
+                             <span><i class="fa fa-map-marker"></i>London</span>   
+                              <span><i class="fa fa-sun-o"></i>4 Days</span>  
+                              <span> <i class="fa fa-moon-o"></i>3 Nights</span> 
+                        </div>
+                    </div>    
+        </div>                                         
 </div>
+
     <footer>
         <div><ul>
             <li><strong>Our location</strong></li>
@@ -107,6 +204,6 @@
             <li><strong>Email</strong></li>
             <li>travelwithus@gmail.com</li>
         </ul></div>
-    </footer>
+    </footer> -->
 </body>
 </html>
