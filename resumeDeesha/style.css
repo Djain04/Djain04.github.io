@@ -1,0 +1,239 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+:root{
+    --ff-primary:'Roboto Condensed', sans-serif;
+    --ff-secondary:'Roboto Slab', sans-serif;
+
+    --fw-reg: 300;
+    --fw-bold: 900;
+
+    --clr-light: #fff;
+    --clr-dark: #303030;
+    --clr-accent: #16e8bd;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body:1rem;
+
+
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,0.25);
+}
+
+body{
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    margin:0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1;
+}
+p{
+    margin:0.8em;
+    text-align: justify;
+    text-align-last:left;
+}
+h1,
+h2,
+h3,h4{
+    line-height: 1;
+    margin:0;
+}
+article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:20px;
+}
+header{
+    background: var(--clr-dark);
+    color: var(--clr-light);
+    width:1000px;
+}
+main{
+  margin:auto;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns:600px 400px;
+} 
+#item_1,#item_2 ,#item_3,#item_4,#item_5 {
+    margin:0.5em;
+    /* border:2px solid var(--clr-accent); */
+    /* box-shadow: var(--bs); */
+}
+ #item_1 {
+    grid-row: 1 / span 2 ;
+  } 
+#item_4{
+    grid-row: 3 / span 2;  
+  } 
+
+ .timeline_area{
+    display:grid;
+    grid-template-columns:auto auto;
+    grid-column-gap:20px;
+    padding:5px;  
+  
+}
+.time_container_1{
+    padding-top:8px;  
+}
+.time_container_1>div{
+    margin-bottom:80px; 
+}
+.time_container_2{
+padding-top:10px;
+padding-left:20px;
+border-left: 4px solid var(--clr-dark);
+position: relative;
+}
+.time_container_2>div::before{
+    content:'';
+    display:block;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    border: 4px solid var(--clr-dark);
+    background: var(--clr-accent);
+    position:absolute;
+    left:-12px; 
+}
+.education_header,.skills_header,.interest_header,.language_header,.project_header{
+   font-size:25px;
+   text-align: center;
+   margin:10px 0;
+   font-family: var(--ff-secondary);
+}
+.personal_info_area
+{
+    display:grid;
+    grid-template-columns: max-content min-content;
+    justify-content: center;
+    align-items: center;
+    padding:10px; 
+}
+#objective{
+    width:600px;
+}
+#name,#profession,#objective{
+    padding:8px;  
+}
+.personal_info_area_one,.personal_info_area_two{
+    padding:8px;
+}
+
+.info_list_item,ul{
+    padding:4px;
+}
+.fa-li{
+    color:var(--clr-accent);
+}
+
+.skills_item
+{
+    display:flex;
+    flex-direction: row;
+    margin:10px;
+    text-align: center;
+    justify-content:center;
+}
+.skill_items_1
+{
+    color:var(--clr-accent);
+    background: var(--clr-dark);
+    padding:8px;
+}
+.skill_items_2{
+    border: 2px solid var(--clr-dark);
+    border-left:none;
+    padding:8px;
+}
+#sitem_1
+{
+    width:260px;
+}
+#sitem_2{
+    width:40px;
+}
+#sitem_3{
+    width:240px;
+}
+#sitem_4{
+    width:60px;
+}
+#sitem_5{
+    width:200px;
+}
+#sitem_6{
+    width:100px;
+}
+#sitem_7{
+    width:240px;
+}
+#sitem_8{
+    width:60px;
+}
+.interest_section
+{display:flex;
+justify-content:center;
+align-items:center;
+flex-wrap: wrap;
+    
+}
+.interest_items{
+    background: var(--clr-dark);
+    color: var(--clr-accent);
+    padding:8px;
+    margin:8px;
+}
+.language_items
+{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:center;
+
+}
+.language{
+    width:60px;
+}
+.square{
+    height: 20px;
+    width: 20px;
+    background-color:var(--clr-dark);
+    margin:4px;
+    border-radius: 4px;
+}
+#square_light{
+    opacity:0.8;
+}
+.project_item{
+    margin:4px;
+    padding:4px;
+}
+.fa-certificate{
+    color: var(--clr-dark);
+}
+@media screen and (max-width:600px)
+{
+    header{
+        max-width:350px;
+        padding:4px;
+    }
+    .personal_info_area{
+        display:block;
+      
+    }
+    main{
+        display:block;
+        font-size: 16px;
+    }
+    main>div{
+        margin:8px;
+    }
+}
