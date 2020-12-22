@@ -24,9 +24,14 @@ body{
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
     line-height: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    padding:20px;
 }
 p{
-    margin:0.8em;
+    margin:0;
     text-align: justify;
     text-align-last:left;
 }
@@ -36,13 +41,13 @@ h3,h4{
     line-height: 1;
     margin:0;
 }
-article{
+/* article{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
     padding:20px;
-}
+} */
 header{
     background: var(--clr-dark);
     color: var(--clr-light);
@@ -50,6 +55,7 @@ header{
 }
 main{
   margin:auto;
+  padding:0;
   display: grid;
   justify-content: center;
   align-items: center;
@@ -57,15 +63,15 @@ main{
   border:1px solid var(--clr-dark);
  
 } 
-#item_1,#item_2 ,#item_3,#item_4,#item_5,#item_6 {
+#item_1,#item_2 ,#item_3,#item_4,#item_5,#item_6{
     margin:0.5em;
 }
  #item_1 {
-    grid-row: 1 / span 2 ;
+    grid-row: 1 /span 2;
   } 
-#item_4{
-    grid-row: 3 / span 2;  
-  } 
+#item_3{
+    grid-row: 3 /span 3;
+}
 
   .section_header{
     font-size:25px;
@@ -78,7 +84,7 @@ main{
  .personal_info_area
 {
     display:grid;
-    grid-template-columns: max-content min-content;
+    grid-template-columns: min-content min-content;
     justify-content: center;
     align-items: center;
     padding:5px;
@@ -104,7 +110,7 @@ main{
   .timeline_container{
     display:grid;
     grid-template-columns: 100px 400px;
-    grid-auto-rows:120px;
+    grid-auto-rows:100px;
   }
   .content{
     padding:8px;
@@ -116,6 +122,7 @@ main{
   .data{
     border-left:4px solid var(--clr-dark);
     padding-left:30px;
+    text-align: justify;
   }
   .data::before{
     content:'';
@@ -230,15 +237,74 @@ flex-wrap: wrap;
 /* MEDIA QUERIES */
 @media screen and (max-width:600px)
 {
-
+    /* article{
+        width:100vw;
+    } */
+    /* header{
+        border:none;
+        width:100%;
+    } */
     .personal_info_area{
         display:block;
+    }
+    #objective{
+        width:100vw;
     }
     main{
         display:block;
         font-size: 16px;
+        border:none;
+        /* width:min-content; */
+        width:100vw;
     }
     main>div{
         margin:8px;
+        width:100vw;
+    }
+    .timeline_container{
+        display:grid;
+        grid-template-columns:80px 100px;
+        grid-auto-rows:max-content;
+      }
+}
+
+@media print and (max-width:1200px)
+{
+    body{
+        width:100%;
+        margin:20px;
+        background:white;
+        color:black;
+    }
+    header{
+        padding:8px;
+        border:none;
+        color: inherit;
+        background: inherit;
+    }
+    main{
+        border:none;
+        color: inherit;
+        background: inherit;
+    }
+    .skill_items_1{
+        color:white;
+        background:black;
+    }
+    .interest_items,.skill_items_2,.data{
+        border-color: black;
+        color: inherit;
+        background: inherit;
+    }
+    .square{
+        background-color: black;
+    }
+    .data::before{
+        background-color:black;
+        border-color:black;
+    }
+    .programming_items,.fa-certificate,.fa-li,.data{
+        color: inherit;
+        background: inherit;
     }
 }
