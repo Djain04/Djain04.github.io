@@ -1,0 +1,83 @@
+.note_section{
+margin:0 auto;
+background:url("images/notesbanner.jpg");
+background-size: cover; 
+object-fit: cover;
+background-attachment: fixed;
+background-repeat:no-repeat;
+background-position: center center; 
+height:700px;
+padding:1em;
+font-family: 'Roboto Slab', serif;
+position: relative;
+}
+#addNoteButton{
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    padding:10px; 
+    width:50px; 
+    outline:none;
+    border:none;
+    background-color:maroon;
+    color: white;
+    font-family: inherit;
+    border-radius:50%;
+    font-size: 20px;
+}
+#noteArea{
+display: none;
+outline:none;
+margin:5px;
+background-color:maroon;
+width:200px;
+height: 200px;
+position:absolute;
+top:30%;
+left:40%;
+box-shadow: 0.7em 0.5em 0.75em rgba(0,0,0,0.7);
+}
+#note{
+margin:5px;
+border: none;
+outline: none;
+resize: none;
+width:180px;
+height: 150px;
+}
+div[id^=added_note]{
+width:150px;
+height:150px;
+margin:5px;
+display: inline-block;
+box-shadow: 0.7em 0.5em 0.75em rgba(0,0,0,0.6); 
+padding:10px;
+}
+#save, #close{
+outline:none;
+border:none;
+background-color:none;
+color:white;
+
+} 
+.textarea_buttons{
+position:absolute;
+margin:5px;
+right: 0px;
+}
+#edit_button{
+position:absolute;
+right:25px;
+margin:5px;
+}
+#delete_button{
+position:absolute;
+right:0px;
+margin:5px;  
+}
+#textareaContainer{
+position: absolute;
+top:25px;
+padding:2px;
+}
