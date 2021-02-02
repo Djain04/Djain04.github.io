@@ -1,0 +1,133 @@
+.budgetCalculator{
+  font-family: 'Roboto Slab', serif;
+}
+.budget_section{
+   
+    background-image: url("images/1.jpg");
+    background-size: cover; 
+    object-fit:cover;
+    background-attachment: fixed;
+    background-repeat:no-repeat;
+    background-position: center center; 
+    color:white;
+    font-size: 20px;
+    padding:20px;
+    height:400px; 
+    
+}
+#budgetBox{
+    color:black;
+    margin-top:120px;
+}
+#budgetHeading,#budgetValueContainer{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+}
+#incomeBox{
+    background-color:mediumblue;
+    color: white;
+    width:300px;
+    margin:0 auto ;  
+    padding:10px;
+    position: relative;
+    outline-offset: 4px;
+    margin-bottom: 40px;
+}
+#expenseBox{
+    background-color:darkred;
+    color: white;
+    width:300px; 
+    margin:10px auto ;  
+    padding:10px;
+    position: relative;
+}
+#incomeValueContainer,#expenseValueContainer{
+    position:relative;
+}
+
+input[type="text"]{
+    margin:5px;
+    padding:5px;
+    width:300px;
+    border:none;
+    outline:none;
+    font-family: inherit;
+    font-size: 16px;
+}
+input[type="number"]{
+    margin:5px;
+    padding:5px;
+    width:100px;
+    border:none;
+    outline:none;
+    font-family: inherit;
+    font-size: 16px;
+}
+#inputContainer{
+    text-align: center;
+    background-color:#dedede;
+}
+#amountType{
+    margin:5px;
+    padding:5px;
+    width:60px;
+    border:none;
+    outline:none;
+    font-family: inherit; 
+    font-size: 16px;
+    text-align: center;
+}
+#saveButton{
+    margin:5px;
+    padding:5px;
+    width:60px;
+    border:none;
+    outline:2px solid dodgerblue;
+    font-family: inherit; 
+    font-size: 16px;
+    text-align: center;
+    color:dodgerblue;
+    background-color: none; 
+}
+#saveButton:hover{
+    background-color:dodgerblue;
+    color: white;
+}
+#totalIncome, #totalExpense{
+   position: absolute;
+   right: 50px;;
+}
+.entryContainer{
+    display:grid;
+    grid-gap: 200px; 
+    grid-template-columns:auto max-content;
+    justify-content: center; 
+    text-align: center;
+ }
+#incomeEntryHeading,#expenseEntryHeading{
+    font-weight: bold;
+}
+div[id^=incomeEntry],div[id^=expenseEntry]{
+    margin:5px;
+    padding: 5px;
+    width:300px;
+    background-color:mediumblue;
+    display: flex;
+    align-items:flex-start;
+    justify-content: flex-start;
+    color: white;
+    position: relative;
+}
+div[id^="expenseEntry"]{
+    background-color:darkred;
+    
+}
+.fa{
+    position:absolute;
+    right:10px;
+}
+.incomeDescription,.expenseDescription{
+    width:200px;
+}

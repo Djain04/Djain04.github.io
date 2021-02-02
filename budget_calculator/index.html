@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="budgetCalculator" id="budgetCalculator">
+        <div class="budget_section">
+               <div id="budgetBox">
+                    <div id="budgetHeading">Today's Budget</div>
+                    <div id="budgetValueContainer">$0.00</div>
+               </div>
+                <div id="incomeBox">
+                    <span id="incomeHeading">Income</span>
+                    <span id="totalIncome">+$0.00</span>
+                </div>
+                <div id="expenseBox">
+                    <span id="expenseHeading">Expense</span>
+                    <span id="totalExpense">-$0.00</span>
+                </div>
+        </div>
+        <div id="inputContainer">
+                    <select id="amountType">
+                        <option value="1">+</option>
+                        <option value="2">-</option>
+                    </select>
+                        <input type="text" name="" id="description" placeholder="Description" >
+                        <input type="number" name="" id="amount" placeholder="Amount" >
+                    <input type="submit" value="Save" id="saveButton">
+        </div>
+      <div class="entryContainer">
+            <div id="incomeContainer">
+                    <span id="incomeEntryHeading">Income</span>
+                    <div id="incomeValueContainer"></div>
+            </div>
+            <div id="expenseContainer">
+                    <span id="expenseEntryHeading">Expense</span>
+                    <div id="expenseValueContainer"></div>
+            </div>
+      </div>
+
+ </div> 
+  <script src="main.js"></script>
+</body>
+</html>
