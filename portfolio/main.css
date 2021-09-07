@@ -3,6 +3,7 @@
 *::after{
     box-sizing: border-box;
 }
+
 :root{
     --ff-primary:'Open Sans', sans-serif;
     --ff-secondary:'Roboto Slab', serif;
@@ -12,7 +13,8 @@
 
     --clr-light: #fff;
     --clr-dark: #303030; 
-    --clr-accent: #16e8bd; 
+    /* --clr-accent: #16e8bd;  */
+    --clr-accent: #f53163; 
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -40,6 +42,7 @@ body{
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
     line-height: 1.6;
+
 }
 img{
     display: block;
@@ -57,7 +60,7 @@ strong{
     display:inline-block;
     padding: 0.5em 1.5em;
     background-color: var(--clr-accent);
-    color:var(--clr-dark);
+    color:var(--clr-light);
     text-decoration: none;
     cursor: pointer;
     font-size:0.8em;
@@ -179,21 +182,20 @@ nav{
 .nav_link:hover{
     color: var(--clr-accent);
 }
-.nav_toggle{
-    padding:1.4em;
-    margin:0.5em;
-    border:none;
+.nav_toggle {
+    padding: 1.4em;
+    margin: 0.3em;
+    border: none;
     outline: none;
     cursor: pointer;
     position: absolute;
-    right:1em;
-    top:1em;
-    z-index:1000;
-    
+    right: 1em;
+    z-index: 1000;
 }
+
 .nav_toggle:focus{
     outline:3px solid var(--clr-accent);
-    outline-offset:0.3em;
+    outline-offset:0.1em;
 }
 .nav_open .nav_toggle{
     position:fixed;
@@ -419,6 +421,7 @@ text-align: center;
 .portfolio{
     display:grid;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-gap: 0.2em;
 }
 .portfolio_link{
     background: var(--clr-accent);
@@ -451,6 +454,10 @@ text-align: center;
 .project_video_section{
     text-align: center;
     padding: 1em;
+}
+.project_image_section img{
+    text-align: center;
+    margin: 1em auto;
 }
  
 
@@ -502,7 +509,7 @@ footer a{
     padding: 0 2em 2em;
     margin-left:auto;
     margin-right: auto;
-    max-width: 1200px;
+    max-width:800px;
 }
 
  .portfolio_item_heading{
@@ -510,6 +517,7 @@ footer a{
      background-color: var(--clr-accent);
      font-size:1.2em;
      padding:0.3em;
+     color: var(--clr-light);
  }
  @media (max-width:600px)
  {
